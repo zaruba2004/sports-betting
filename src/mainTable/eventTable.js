@@ -1,12 +1,13 @@
 import React from 'react'
 import './eventTable.css';
+import MatchItem from './matchItem'
 
 export default function EventTable(props) {
     return (
         <ul>
-            <li>Match1</li>
-            <li>Match2</li>
-            <li>Match3</li>
+            {props.matches.map((match) => {
+                return <MatchItem match={match} key={match.id}/>            
+            })}
         </ul>
     )
 }
