@@ -1,24 +1,18 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import EventTable from './mainTable/eventTable.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="App-header">
+      <a className="logoLeft"><img src={logo} className="App-logo" alt="logo" /></a>
+      <h2>Ставки на спорт</h2>
+      <span>Menu</span>        
+    </header>
+    <EventTable  />
+  </div>
   );
 }
 
